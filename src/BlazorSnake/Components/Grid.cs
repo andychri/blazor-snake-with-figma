@@ -24,7 +24,7 @@ public class Grid
     /// <param name="row">Current cell row in the range [0, _rows]</param>
     /// <param name="column">Current cell column in the range [0, _columns]</param>
     /// <returns>A zero based integer index for the _grid array</returns>
-    public int IndexOf(int row, int column)
+    private int IndexOf(int row, int column)
     {
         return row * Columns + column;
     }
@@ -58,7 +58,7 @@ public class Grid
     /// <returns><see langword="false"/> if the cell is out of bounds; otherwise <see langword="true"/>.</returns>
     public bool IsInside(int row, int column)
     {
-        return row < 0 || row >= Rows || column < 0 || column >= Columns;
+        return !(row < 0 || row >= Rows || column < 0 || column >= Columns);
     }
 
     /// <summary>
