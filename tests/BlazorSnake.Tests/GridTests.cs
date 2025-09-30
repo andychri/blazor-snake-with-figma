@@ -18,7 +18,7 @@ public class GridTests
     }
     
     [Fact]
-    public void Get_Correct_Index()
+    public void Is_Cell_Inside_Grid()
     {
         var g = new Grid(3, 2);
         Assert.True(g.IsInside(0, 0));
